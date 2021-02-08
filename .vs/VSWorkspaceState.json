@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\libs\\i18next",
+    "\\libs\\three.js",
+    "\\libs\\three.js\\libs",
+    "\\resources",
+    "\\resources\\lang",
+    "\\src",
+    "\\src\\viewer"
   ],
+  "SelectedNode": "\\resources\\lang",
   "PreviewInSolutionExplorer": false
 }
