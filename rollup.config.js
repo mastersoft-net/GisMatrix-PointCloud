@@ -1,3 +1,5 @@
+const minify = require('rollup-plugin-minify-cli');
+
 export default [
 	{
 		input: 'src/Potree.js',
@@ -6,8 +8,13 @@ export default [
 			file: 'build/potree/potree.js',
 			format: 'umd',
 			name: 'Potree',
-			sourcemap: true,
-		}
+			sourcemap: false,
+		},
+		plugins: [
+			minify({
+				minimize: true
+			})
+		]
 	},{
 		input: 'src/workers/BinaryDecoderWorker.js',
 		output: {

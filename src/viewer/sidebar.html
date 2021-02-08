@@ -1,7 +1,7 @@
 
 <div id="sidebar_root" class="">
 	<div id="sidebar_header">
-		<span id="potree_branding" class="potree_sidebar_brand">
+		<!--<span id="potree_branding" class="potree_sidebar_brand">
 			<a href="http://potree.org" target="_blank">potree.org</a> 
 			<span style="margin: 0px 3px; color: #9AA1A4"> - </span> 
 			<a href="https://github.com/potree/potree" target="_blank">github</a>
@@ -9,8 +9,8 @@
 			<a href="https://twitter.com/m_schuetz" target="_blank">twitter</a>
 			<span style="flex-grow: 1"></span>
 			<span id="potree_version_number" style="color: #9AA1A4; font-size: 80%; font-weight: 100"></span>
-		</span>
-		<div id="potree_languages" style="font-family:arial;"></div>
+		</span>-->
+		<div id="potree_languages" style="font-family:arial;display:none;"></div>
 	</div>
 	<div> 
 
@@ -35,11 +35,11 @@
 
 				<li>
 					<selectgroup id="background_options">
-						<option id="background_options_skybox" value="skybox">Skybox</option>
-						<option id="background_options_gradient" value="gradient">Gradient</option>
-						<option id="background_options_black" value="black">Black</option>
-						<option id="background_options_white" value="white">White</option>
-						<option id="background_options_none" value="null">None</option>
+						<option id="background_options_skybox" value="skybox"><span data-i18n="appearance.bgSkybox"></span></option>
+						<option id="background_options_gradient" value="gradient"><span data-i18n="appearance.bgGradient"></span></option>
+						<option id="background_options_black" value="black"><span data-i18n="appearance.bgBlack"></span></option>
+						<option id="background_options_white" value="white"><span data-i18n="appearance.bgWhite"></span></option>
+						<option id="background_options_none" value="null"><span data-i18n="appearance.bgNone"></span></option>
 					</selectgroup>
 				</li>
 
@@ -63,38 +63,38 @@
 		<h3 id="menu_tools"><span data-i18n="tb.tools_opt"></span></h3>
 		<div class="pv-menu-list">
 
-			<div class="divider"><span>Measurement</span></div>
+			<div class="divider"><span data-i18n="gismatrix.measurement"></span></div>
 
 			<li id="tools"></li>
 
 			<li>
 				<selectgroup id="measurement_options_show">
-					<option id="measurement_options_show_yes" value="SHOW">Show</option>
-					<option id="measurement_options_show_no" value="HIDE">Hide</option>
+					<option id="measurement_options_show_yes" value="SHOW"><span data-i18n="gismatrix.labelsShow"></span></option>
+					<option id="measurement_options_show_no" value="HIDE"><span data-i18n="gismatrix.labelsHide"></span></option>
 				</selectgroup>
 			</li>
 
-			<div class="divider"><span>Clipping</span></div>
+			<div class="divider"><span data-i18n="gismatrix.clipping"></span></div>
 
 			<li id="clipping_tools"></li>
 
 			<li>
 				<selectgroup id="cliptask_options">
-					<option id="cliptask_options_none" value="NONE">None</option>
-					<option id="cliptask_options_highlight" value="HIGHLIGHT">Highlight</option>
-					<option id="cliptask_options_show_inside" value="SHOW_INSIDE">Inside</option>
-					<option id="cliptask_options_show_outside" value="SHOW_OUTSIDE">Outside</option>
+					<option id="cliptask_options_none" value="NONE"><span data-i18n="gismatrix.clipNone"></span></option>
+					<option id="cliptask_options_highlight" value="HIGHLIGHT"><span data-i18n="gismatrix.clipHighlight"></span></option>
+					<option id="cliptask_options_show_inside" value="SHOW_INSIDE"><span data-i18n="gismatrix.clipInside"></span></option>
+					<option id="cliptask_options_show_outside" value="SHOW_OUTSIDE"><span data-i18n="gismatrix.clipOutside"></span></option>
 				</selectgroup>
 			</li>
 
 			<li>
 				<selectgroup id="clipmethod_options">
-					<option id="clipmethod_options_any" value="INSIDE_ANY">Inside Any</option>
-					<option id="clipmethod_options_all" value="INSIDE_ALL">Inside All</option>
+					<option id="clipmethod_options_any" value="INSIDE_ANY"><span data-i18n="gismatrix.clipInsideAny"></span></option>
+					<option id="clipmethod_options_all" value="INSIDE_ALL"><span data-i18n="gismatrix.clipInsideAll"></span></option>
 				</selectgroup>
 			</li>
 			
-			<div class="divider"><span>Navigation</span></div>
+			<div class="divider"><span data-i18n="gismatrix.navigation"></span></div>
 
 			<li id="navigation"></li>
 
@@ -107,11 +107,11 @@
 
 			<div id="scene_export"></div>
 
-			<div class="divider"><span>Objects</span></div>
+			<div class="divider"><span data-i18n="gismatrix.objects"></span></div>
 
 			<div id="scene_objects"></div>
 
-			<div class="divider"><span>Properties</span></div>
+			<div class="divider"><span data-i18n="gismatrix.properties"></span></div>
 
 			<div id="scene_object_properties"></div>
 		</div>
@@ -120,11 +120,11 @@
 		<h3 id="menu_filters"><span data-i18n="tb.filters_opt"></span></h3>
 		<div>
 
-			<div class="divider"><span>Classification</span></div>
+			<div class="divider"><span data-i18n="gismatrix.classification"></span></div>
 
 			<ul id="classificationList" class="pv-menu-list"></ul>
 
-			<div class="divider"><span>Returns</span></div>
+			<div class="divider"><span data-i18n="gismatrix.returns"></span></div>
 
 			<div id="return_filter_panel">
 				<ul class="pv-menu-list">
@@ -135,7 +135,7 @@
 				</ul>
 			</div>
 
-			<div class="divider"><span>Point Source ID</span></div>
+			<div class="divider"><span data-i18n="gismatrix.pointSourceID"></span></div>
 
 			<div>
 				<ul class="pv-menu-list" id="pointsourceid_filter_panel">
@@ -143,7 +143,7 @@
 				</ul>
 			</div>
 
-			<div class="divider"><span>GPS Time</span></div>
+			<div class="divider"><span data-i18n="filters.gismatrix.gPSTime"></span></div>
 
 			<div id="gpstime_filter_panel">
 
@@ -167,7 +167,7 @@
 		
 		<!-- ABOUT -->
 		<h3 id="menu_about"><span data-i18n="tb.about_opt"></span></h3>
-		<div>
+		<!--<div>
 			<ul class="pv-menu-list">
 				<li><a href="http://potree.org" target="_blank">Potree</a> is a viewer for large point cloud / LIDAR data sets, developed at the Vienna University of Technology. 
 				<a href="https://github.com/potree/potree" target="_blank">(github)</a>
@@ -252,7 +252,7 @@ Thanks to all the companies and institutions funding Potree:
 
 			
 			</ul>
-		</div>
+		</div>-->
 
 	</div>
 
