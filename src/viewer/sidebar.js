@@ -401,12 +401,12 @@ export class Sidebar{
 			return nodeID;
 		}
 
-		let pcID = tree.jstree('create_node', "#", { "text": "<b>Point Clouds</b>", "id": "pointclouds"}, "last", false, false);
-		let measurementID = tree.jstree('create_node', "#", { "text": "<b>Measurements</b>", "id": "measurements" }, "last", false, false);
-		let annotationsID = tree.jstree('create_node', "#", { "text": "<b>Annotations</b>", "id": "annotations" }, "last", false, false);
-		let otherID = tree.jstree('create_node', "#", { "text": "<b>Other</b>", "id": "other" }, "last", false, false);
-		let vectorsID = tree.jstree('create_node', "#", { "text": "<b>Vectors</b>", "id": "vectors" }, "last", false, false);
-		let imagesID = tree.jstree('create_node', "#", { "text": "<b> Images</b>", "id": "images" }, "last", false, false);
+		let pcID = tree.jstree('create_node', "#", { "text": "<b><span data-i18n=\"gismatrix.pointClouds\"></span></b>", "id": "pointclouds"}, "last", false, false);
+		let measurementID = tree.jstree('create_node', "#", { "text": "<b><span data-i18n=\"gismatrix.measurement\"></span></b>", "id": "measurements" }, "last", false, false);
+		let annotationsID = tree.jstree('create_node', "#", { "text": "<b><span data-i18n=\"gismatrix.annotations\"></span></b>", "id": "annotations" }, "last", false, false);
+		let otherID = tree.jstree('create_node', "#", { "text": "<b><span data-i18n=\"gismatrix.other\"></span></b>", "id": "other" }, "last", false, false);
+		let vectorsID = tree.jstree('create_node', "#", { "text": "<b><span data-i18n=\"gismatrix.vectors\"></span></b>", "id": "vectors" }, "last", false, false);
+		let imagesID = tree.jstree('create_node', "#", { "text": "<b><span data-i18n=\"gismatrix.images\"></span></b>", "id": "images" }, "last", false, false);
 
 		tree.jstree("check_node", pcID);
 		tree.jstree("check_node", measurementID);
@@ -754,7 +754,7 @@ export class Sidebar{
 		}
 
 		{
-			createNode(otherID, "Camera", null, new THREE.Camera());
+			createNode(otherID, "<span data-i18n=\"gismatrix.camera\"></span>", null, new THREE.Camera());
 		}
 
 		this.viewer.addEventListener("scene_changed", (e) => {
