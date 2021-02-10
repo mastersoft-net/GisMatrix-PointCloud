@@ -53,6 +53,8 @@ export class Viewer extends EventDispatcher{
 			style="position: absolute; z-index: 1000; left: 10px; bottom: 10px">
 		</div>`);
 		$(domElement).append(this.elMessages);
+
+		this.args_ = args;
 		
 		try{
 
@@ -1267,15 +1269,18 @@ export class Viewer extends EventDispatcher{
 			this.mapView.init();
 
 			i18n.init({
-				lng: 'en',
+				lng: this.args_?.lang ?? 'en',
 				resGetPath: Potree.resourcePath + '/lang/__lng__/__ns__.json',
 				preload: ['en', 'fr', 'de', 'jp', 'se', 'es'],
-				getAsync: true,
-				debug: false
-			}, function (t) {
-				// Start translation once everything is loaded
-				$('body').i18n();
+				getAsync: false,
+				debug: true
 			});
+			//}, function (t) {
+			//	// Start translation once everything is loaded
+			//	// $('body').i18n();
+			//});
+
+      
 
 			$(() => {
 				//initSidebar(this);
@@ -1311,19 +1316,18 @@ export class Viewer extends EventDispatcher{
 					});
 				});
 
-				
-
-			});
-
-			
+				// Ker so kontrolniki v sidebar.html skriti, je možno jezik nastaviti samo v inicializaciji Viewerja arg = {lang='sl'}.
+				$('body').i18n();
+			});			
 		});
 
 		return this.promiseGuiLoaded();
 	}
 
-	setLanguage (lang) {
-		i18n.setLng(lang);
-		$('body').i18n();
+	setLanguage(lang) {
+		// Ker so kontrolniki v sidebar.html skriti, je možno jezik nastaviti samo v inicializaciji Viewerja arg = {lang='sl'}.
+		//i18n.setLng(lang);
+		//$('body').i18n();
 	}
 
 	setServer (server) {

@@ -375,10 +375,6 @@ export class ProfileWindow extends EventDispatcher {
 							transform = value => value / scale + offset;
 						}
 
-						
-
-						
-
 						if (attributeName === 'position') {
 							let values = [...position].map(v => Utils.addCommas(v.toFixed(3)));
 							html += `

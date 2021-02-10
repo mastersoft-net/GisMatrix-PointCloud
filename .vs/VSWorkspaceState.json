@@ -1,9 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\examples",
+    "\\examples\\showcase",
+    "\\resources",
+    "\\resources\\lang",
+    "\\resources\\lang\\en",
     "\\src",
-    "\\src\\viewer"
+    "\\src\\materials",
+    "\\src\\viewer",
+    "\\src\\viewer\\PropertyPanels"
   ],
-  "SelectedNode": "\\src\\viewer\\sidebar.js",
+  "SelectedNode": "\\src\\viewer\\PropertyPanels\\PropertiesPanel.js",
   "PreviewInSolutionExplorer": false
 }

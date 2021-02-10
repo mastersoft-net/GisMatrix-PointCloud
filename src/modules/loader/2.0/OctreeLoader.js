@@ -78,6 +78,8 @@ export class NodeLoader{
 
 					let buffer = buffers[property].buffer;
 
+					console.log("property", property);
+
 					if(property === "position"){
 						geometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(buffer), 3));
 					}else if(property === "rgba"){

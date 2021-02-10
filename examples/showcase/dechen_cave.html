@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -41,7 +41,7 @@
 
 	import * as THREE from "../../libs/three.js/build/three.module.js";
 	
-		window.viewer = new Potree.Viewer(document.getElementById("potree_render_area"));
+		window.viewer = new Potree.Viewer(document.getElementById("potree_render_area"), {lang:"sl"});
 		
 		viewer.setEDLEnabled(true);
 		viewer.setFOV(60);
@@ -56,7 +56,7 @@
 
 		
 		viewer.loadGUI(() => {
-			viewer.setLanguage('en');
+			//viewer.setLanguage('en');
 			$("#menu_appearance").next().show();
 			$("#menu_tools").next().show();
 			$("#menu_scene").next().show();

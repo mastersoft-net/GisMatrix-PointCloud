@@ -111,17 +111,21 @@ SEQEND
 		}
 		measurements = measurements.filter(m => m instanceof Measure);
 
-		let points = measurements.filter(m => (m instanceof Measure))
-			.map(m => m.points)
-			.reduce((a, v) => a.concat(v))
-			.map(p => p.position);
+		try {
+			let points = measurements.filter(m => (m instanceof Measure))
+				.map(m => m.points)
+				.reduce((a, v) => a.concat(v))
+				.map(p => p.position);
 
-		let min = new THREE.Vector3(Infinity, Infinity, Infinity);
-		let max = new THREE.Vector3(-Infinity, -Infinity, -Infinity);
-		for (let point of points) {
-			min.min(point);
-			max.max(point);
-		}
+			let min = new THREE.Vector3(Infinity, Infinity, Infinity);
+			let max = new THREE.Vector3(-Infinity, -Infinity, -Infinity);
+			for (let point of points) {
+				min.min(point);
+				max.max(point);
+			}
+		} catch {
+			return null; // Ni aktivne meritve
+        }
 
 		let dxfHeader = `999
 DXF created from potree

@@ -73,9 +73,11 @@ export class HierarchicalSlider{
 		this.updateLabels();
 	}
 
-	addLevel(){
+	addLevel() {
+		const rangeTxt = i18n.t("gismatrix.range") + " ";
+
 		const elLevel = document.createElement("li");
-		const elRange = document.createTextNode("Range: ");
+		const elRange = document.createTextNode(rangeTxt);
 		const label = document.createElement("span");
 		const slider = document.createElement("div");
 
@@ -153,7 +155,7 @@ export class HierarchicalSlider{
 			let [min, max] = $(slider).slider("option", "values");
 			let strMin = format(min);
 			let strMax = format(max);
-			let strLabel = `${strMin} to ${strMax}`;
+			let strLabel = `${strMin} ${i18n.t("gismatrix.to")} ${strMax}`;
 
 			label.innerHTML = strLabel;
 		}
