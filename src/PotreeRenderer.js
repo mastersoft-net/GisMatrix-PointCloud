@@ -1298,7 +1298,6 @@ export class Renderer {
             shader.setUniform1f("uOctreeSpacing", material.spacing);
             shader.setUniform("uOctreeSize", material.uniforms.octreeSize.value);
 
-
             //uniform vec3 uColor;
             shader.setUniform3f("uColor", material.color.toArray());
             //uniform float opacity;

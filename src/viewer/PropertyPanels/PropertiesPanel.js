@@ -409,11 +409,9 @@ export class PropertiesPanel {
 
             options = options.filter(o => !blacklist.includes(o));
 
-            console.log("Options", options);
-
             let attributeSelection = panel.find('#optMaterial');
             for (let option of options) {
-                let elOption = $(`<option value="${option}">${this.localizeAttribute(option)}</option>`);
+                let elOption = $(`<option value="${option}">${this.viewer.localizeAttribute(option)}</option>`);
                 attributeSelection.append(elOption);
             }
 
@@ -720,7 +718,7 @@ export class PropertiesPanel {
                 showInput: true,
                 preferredFormat: 'rgb',
                 cancelText: '',
-                chooseText: 'Apply',
+                chooseText: i18n.t("gismatrix.apply"),
                 color: `#${material.color.getHexString()}`,
                 move: color => {
                     let cRGB = color.toRgb();
@@ -869,43 +867,6 @@ export class PropertiesPanel {
             onRGBChange();
         }
 
-    }
-
-    localizeAttribute(attribute) {
-        switch (attribute) {
-            case "composite":
-                return i18n.t("gismatrix.attrComposite");
-            case "elevation":
-                return i18n.t("gismatrix.attrElevation");
-            case "RGB and Elevation":
-                return i18n.t("gismatrix.attrRGBElevation");
-            case "rgba":
-                return i18n.t("gismatrix.attrRgba");
-            case "color":
-                return i18n.t("gismatrix.attrColor");
-            case "intensity":
-                return i18n.t("gismatrix.attrIntensity");
-            case "intensity gradient":
-                return i18n.t("gismatrix.attrIntensityGradient");
-            case "indices":
-                return i18n.t("gismatrix.attrIndices");
-            case "matcap":
-                return i18n.t("gismatrix.attrMatcap");
-            case "classification":
-                return i18n.t("gismatrix.attrClassification");
-            case "gps-time":
-                return i18n.t("gismatrix.attrGPSTime");
-            case "number of returns":
-                return i18n.t("gismatrix.attrNumberOfReturns");
-            case "return number":
-                return i18n.t("gismatrix.attrReturnNumber");
-            case "source id":
-                return i18n.t("gismatrix.attrSourceId");
-            case "point source id":
-                return i18n.t("gismatrix.attrPointSourceId");
-            case "level of detail":
-                return i18n.t("gismatrix.attrLevelOfDetail");
-        }
     }
 
     setMeasurement(object) {

@@ -401,13 +401,13 @@ export class ProfileWindow extends EventDispatcher {
 						} else if (attributeName === 'mileage') {
 							html += `
 								<tr>
-									<td>${attributeName}</td>
+									<td>${this.viewer.localizeAttribute(attributeName)}</td>
 									<td>${value.toFixed(3)}</td>
 								</tr>`;
 						} else {
 							html += `
 								<tr>
-									<td>${attributeName}</td>
+									<td>${this.viewer.localizeAttribute(attributeName)}</td>
 									<td>${transform(value)}</td>
 								</tr>`;
 						}

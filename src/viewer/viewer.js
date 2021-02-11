@@ -1334,6 +1334,47 @@ export class Viewer extends EventDispatcher{
 		this.server = server;
 	}
 
+	localizeAttribute(attribute) {
+		switch (attribute) {
+			case "composite":
+				return i18n.t("gismatrix.attrComposite");
+			case "elevation":
+				return i18n.t("gismatrix.attrElevation");
+			case "RGB and Elevation":
+				return i18n.t("gismatrix.attrRGBElevation");
+			case "rgba":
+				return i18n.t("gismatrix.attrRgba");
+			case "color":
+				return i18n.t("gismatrix.attrColor");
+			case "intensity":
+				return i18n.t("gismatrix.attrIntensity");
+			case "intensity gradient":
+				return i18n.t("gismatrix.attrIntensityGradient");
+			case "indices":
+				return i18n.t("gismatrix.attrIndices");
+			case "matcap":
+				return i18n.t("gismatrix.attrMatcap");
+			case "classification":
+				return i18n.t("gismatrix.attrClassification");
+			case "gps-time":
+				return i18n.t("gismatrix.attrGPSTime");
+			case "number of returns":
+				return i18n.t("gismatrix.attrNumberOfReturns");
+			case "return number":
+				return i18n.t("gismatrix.attrReturnNumber");
+			case "source id":
+				return i18n.t("gismatrix.attrSourceId");
+			case "point source id":
+				return i18n.t("gismatrix.attrPointSourceId");
+			case "level of detail":
+				return i18n.t("gismatrix.attrLevelOfDetail");
+			case "mileage":
+				return i18n.t("gismatrix.mileage");
+			default:
+				return attribute;
+		}
+	}
+
 	initDragAndDrop(){
 		function allowDrag(e) {
 			e.dataTransfer.dropEffect = 'copy';

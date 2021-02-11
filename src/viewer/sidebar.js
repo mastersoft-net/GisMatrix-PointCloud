@@ -1163,7 +1163,7 @@ export class Sidebar {
                 showInput: true,
                 preferredFormat: 'rgb',
                 cancelText: '',
-                chooseText: 'Apply',
+                chooseText: i18n.t("gismatrix.apply"),
                 move: color => {
                     let rgb = color.toRgb();
                     const c = [rgb.r / 255, rgb.g / 255, rgb.b / 255, 1];
@@ -1184,7 +1184,7 @@ export class Sidebar {
 				<li>
 					<label style="whitespace: nowrap">
 						<input id="toggleClassificationFilters" type="checkbox" checked/>
-						<span>show/hide all</span>
+						<span>${i18n.t("gismatrix.show_hide_all")}</span>
 					</label>
 				</li>
 			`);
@@ -1201,7 +1201,7 @@ export class Sidebar {
         const addInvertButton = () => {
             const element = $(`
 				<li>
-					<input type="button" value="invert" />
+					<input type="button" value=${i18n.t("gismatrix.invert")} />
 				</li>
 			`);
 
