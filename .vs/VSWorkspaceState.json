@@ -7,10 +7,11 @@
     "\\resources\\lang",
     "\\resources\\lang\\en",
     "\\src",
-    "\\src\\materials",
+    "\\src\\exporter",
+    "\\src\\utils",
     "\\src\\viewer",
     "\\src\\viewer\\PropertyPanels"
   ],
-  "SelectedNode": "\\src\\viewer\\PropertyPanels\\PropertiesPanel.js",
+  "SelectedNode": "\\src\\extensions",
   "PreviewInSolutionExplorer": false
 }

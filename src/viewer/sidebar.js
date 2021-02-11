@@ -893,8 +893,10 @@ export class Sidebar {
                 "[title]tt.screen_clip_box",
                 () => {
                     if (!(this.viewer.scene.getActiveCamera() instanceof THREE.OrthographicCamera)) {
-                        this.viewer.postMessage(`Switch to Orthographic Camera Mode before using the Screen-Box-Select tool.`,
-                            { duration: 2000 });
+                        //this.viewer.postMessage(`Switch to Orthographic Camera Mode before using the Screen-Box-Select tool.`,
+                        //    { duration: 2000 });
+                        this.viewer.postMessage(i18n.t("gismatrix.switcToOrtho"),
+                            { duration: 3000 });
                         return;
                     }
 

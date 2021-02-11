@@ -119,8 +119,12 @@ export class VolumePanel extends MeasurePanel{
 			let msg = rotation.map(c => c.toFixed(3)).join(", ");
 			Utils.clipboardCopy(msg);
 
+			//this.viewer.postMessage(
+			//		`Copied value to clipboard: <br>'${msg}'`,
+			//	{ duration: 3000 });
+
 			this.viewer.postMessage(
-					`Copied value to clipboard: <br>'${msg}'`,
+				    `${i18n.t("gismatrix.CopiedToClipboard")}: <br>'${msg}'`,
 					{duration: 3000});
 		});
 
@@ -130,8 +134,12 @@ export class VolumePanel extends MeasurePanel{
 			let msg = scale.map(c => c.toFixed(3)).join(", ");
 			Utils.clipboardCopy(msg);
 
+			//this.viewer.postMessage(
+			//		`Copied value to clipboard: <br>'${msg}'`,
+			//	{ duration: 3000 });
+
 			this.viewer.postMessage(
-					`Copied value to clipboard: <br>'${msg}'`,
+				    `${i18n.t("gismatrix.CopiedToClipboard")}: <br>'${msg}'`,
 					{duration: 3000});
 		});
 

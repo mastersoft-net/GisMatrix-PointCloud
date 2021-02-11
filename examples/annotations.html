@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -160,7 +160,7 @@
 						{name: "RAINBOW", icon: `${Potree.resourcePath}/icons/gradients_rainbow.png`},
 					];
 
-					let elTitle = $(`<span>Gradient Schemes:</span>`);
+                    let elTitle = $(`<span data-i18n="gismatrix.gradientSchemes"></span>`);
 					for(let scheme of schemes){
 						let button = $(`<img src="${scheme.icon}" class="annotation-action-icon" style="width: 2em; height: auto;"/>`);
 						button.click( () => {

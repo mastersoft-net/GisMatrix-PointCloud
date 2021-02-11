@@ -135,12 +135,12 @@ export class PropertiesPanel {
 						<span data-i18n="gismatrix.attributeWeights"></span>
 					</div>
 
-					<li>RGB: <span id="lblWeightRGB"></span> <div id="sldWeightRGB"></div>	</li>
-					<li>Intensity: <span id="lblWeightIntensity"></span> <div id="sldWeightIntensity"></div>	</li>
-					<li>Elevation: <span id="lblWeightElevation"></span> <div id="sldWeightElevation"></div>	</li>
-					<li>Classification: <span id="lblWeightClassification"></span> <div id="sldWeightClassification"></div>	</li>
-					<li>Return Number: <span id="lblWeightReturnNumber"></span> <div id="sldWeightReturnNumber"></div>	</li>
-					<li>Source ID: <span id="lblWeightSourceID"></span> <div id="sldWeightSourceID"></div>	</li>
+					<li>${i18n.t("gismatrix.attrRgb")}: <span id="lblWeightRGB"></span> <div id="sldWeightRGB"></div>	</li>
+					<li>${i18n.t("gismatrix.attrIntensity")}: <span id="lblWeightIntensity"></span> <div id="sldWeightIntensity"></div>	</li>
+					<li>${i18n.t("gismatrix.attrElevation")}: <span id="lblWeightElevation"></span> <div id="sldWeightElevation"></div>	</li>
+					<li>${i18n.t("gismatrix.attrClassification")}: <span id="lblWeightClassification"></span> <div id="sldWeightClassification"></div>	</li>
+					<li>${i18n.t("gismatrix.attrReturnNumber")}: <span id="lblWeightReturnNumber"></span> <div id="sldWeightReturnNumber"></div>	</li>
+					<li>${i18n.t("gismatrix.attrSourceId")}: <span id="lblWeightSourceID"></span> <div id="sldWeightSourceID"></div>	</li>
 				</div>
 
 				<div id="materials.rgb_container">
@@ -148,9 +148,9 @@ export class PropertiesPanel {
 						<span>RGB</span>
 					</div>
 
-					<li>Gamma: <span id="lblRGBGamma"></span> <div id="sldRGBGamma"></div>	</li>
-					<li>Brightness: <span id="lblRGBBrightness"></span> <div id="sldRGBBrightness"></div>	</li>
-					<li>Contrast: <span id="lblRGBContrast"></span> <div id="sldRGBContrast"></div>	</li>
+					<li>${i18n.t("gismatrix.gamma")}: <span id="lblRGBGamma"></span> <div id="sldRGBGamma"></div>	</li>
+					<li>${i18n.t("gismatrix.brightness")}: <span id="lblRGBBrightness"></span> <div id="sldRGBBrightness"></div>	</li>
+					<li>${i18n.t("gismatrix.contrast")}: <span id="lblRGBContrast"></span> <div id="sldRGBContrast"></div>	</li>
 				</div>
 
 				<div id="materials.extra_container">
@@ -160,9 +160,9 @@ export class PropertiesPanel {
 
 					<li><span data-i18n="appearance.extra_range"></span>: <span id="lblExtraRange"></span> <div id="sldExtraRange"></div></li>
 
-					<li>Gamma: <span id="lblExtraGamma"></span> <div id="sldExtraGamma"></div></li>
-					<li>Brightness: <span id="lblExtraBrightness"></span> <div id="sldExtraBrightness"></div></li>
-					<li>Contrast: <span id="lblExtraContrast"></span> <div id="sldExtraContrast"></div></li>
+					<li>${i18n.t("gismatrix.gamma")}: <span id="lblExtraGamma"></span> <div id="sldExtraGamma"></div></li>
+					<li>${i18n.t("gismatrix.brightness")}: <span id="lblExtraBrightness"></span> <div id="sldExtraBrightness"></div></li>
+					<li>${i18n.t("gismatrix.contrast")}: <span id="lblExtraContrast"></span> <div id="sldExtraContrast"></div></li>
 				</div>
 				
 				<div id="materials.matcap_container">
@@ -219,10 +219,10 @@ export class PropertiesPanel {
 						<span data-i18n="gismatrix.intensity"></span>
 					</div>
 
-					<li>Range: <span id="lblIntensityRange"></span> <div id="sldIntensityRange"></div>	</li>
-					<li>Gamma: <span id="lblIntensityGamma"></span> <div id="sldIntensityGamma"></div>	</li>
-					<li>Brightness: <span id="lblIntensityBrightness"></span> <div id="sldIntensityBrightness"></div>	</li>
-					<li>Contrast: <span id="lblIntensityContrast"></span> <div id="sldIntensityContrast"></div>	</li>
+					<li>${i18n.t("gismatrix.range")} <span id="lblIntensityRange"></span> <div id="sldIntensityRange"></div>	</li>
+					<li>${i18n.t("gismatrix.gamma")}: <span id="lblIntensityGamma"></span> <div id="sldIntensityGamma"></div>	</li>
+					<li>${i18n.t("gismatrix.brightness")}: <span id="lblIntensityBrightness"></span> <div id="sldIntensityBrightness"></div>	</li>
+					<li>${i18n.t("gismatrix.contrast")}: <span id="lblIntensityContrast"></span> <div id="sldIntensityContrast"></div>	</li>
 				</div>
 
 				<div id="materials.gpstime_container">
@@ -387,23 +387,6 @@ export class PropertiesPanel {
 
             options.push(...attributes.map(a => a.name));
 
-            const attrCompositeTxt = i18n.t("gismatrix.attrComposite");
-            const attrElevationTxt = i18n.t("gismatrix.attrElevation");
-            const attrRGBElevationTxt = i18n.t("gismatrix.attrRGBElevation");
-            const attrRgbaTxt = i18n.t("gismatrix.attrRgba");
-            const attrColorTxt = i18n.t("gismatrix.attrColor");
-            const attrIntensityTxt = i18n.t("gismatrix.attrIntensity");
-            const attrIntensityGradientTxt = i18n.t("gismatrix.attrIntensityGradient");
-            const attrIndicesTxt = i18n.t("gismatrix.attrIndices");
-            const attrMatcapTxt = i18n.t("gismatrix.attrMatcap");
-            const attrClassificationTxt = i18n.t("gismatrix.attrClassification");
-            const attrGPSTimeTxt = i18n.t("gismatrix.attrGPSTime");
-            const attrNumberOfReturnsTxt = i18n.t("gismatrix.attrNumberOfReturns");
-            const attrReturnNumberTxt = i18n.t("gismatrix.attrReturnNumber");
-            const attrSourceIdTxt = i18n.t("gismatrix.attrSourceId");
-            const attrPointSourceIdTxt = i18n.t("gismatrix.attrPointSourceId");
-            const attrLevelOfDetailTxt = i18n.t("gismatrix.attrLevelOfDetail");
-
             //const intensityIndex = options.indexOf("intensity");
 
             //if (intensityIndex >= 0) {
@@ -430,7 +413,7 @@ export class PropertiesPanel {
 
             let attributeSelection = panel.find('#optMaterial');
             for (let option of options) {
-                let elOption = $(`<option value="${option}">${option}1</option>`);
+                let elOption = $(`<option value="${option}">${this.localizeAttribute(option)}</option>`);
                 attributeSelection.append(elOption);
             }
 
@@ -518,86 +501,36 @@ export class PropertiesPanel {
                     blockElevation.css('display', 'block');
                     blockRGB.css('display', 'block');
                     blockIntensity.css('display', 'block');
-                    } else if (selectedValue === 'elevation') {
+                } else if (selectedValue === 'elevation') {
                     blockElevation.css('display', 'block');
-                    } else if (selectedValue === 'RGB and Elevation') {
+                } else if (selectedValue === 'RGB and Elevation') {
                     blockRGB.css('display', 'block');
                     blockElevation.css('display', 'block');
-                    } else if (selectedValue === 'rgba') {
+                } else if (selectedValue === 'rgba') {
                     blockRGB.css('display', 'block');
-                    } else if (selectedValue === 'color') {
+                } else if (selectedValue === 'color') {
                     blockColor.css('display', 'block');
-                    } else if (selectedValue === 'intensity') {
+                } else if (selectedValue === 'intensity') {
                     blockIntensity.css('display', 'block');
-                    } else if (selectedValue === 'intensity gradient') {
+                } else if (selectedValue === 'intensity gradient') {
                     blockIntensity.css('display', 'block');
-                    } else if (selectedValue === "indices") {
+                } else if (selectedValue === "indices") {
                     blockIndex.css('display', 'block');
-                    } else if (selectedValue === "matcap") {
+                } else if (selectedValue === "matcap") {
                     blockMatcap.css('display', 'block');
-                    } else if (selectedValue === "classification") {
-                     //add classification color selctor?
-                    } else if (selectedValue === "gps-time") {
+                } else if (selectedValue === "classification") {
+                    //add classification color selctor?
+                } else if (selectedValue === "gps-time") {
                     blockGps.css('display', 'block');
-                    } else if (selectedValue === "number of returns") {
+                } else if (selectedValue === "number of returns") {
 
-                    } else if (selectedValue === "return number") {
+                } else if (selectedValue === "return number") {
 
-                    } else if (["source id", "point source id"].includes(selectedValue)) {
+                } else if (["source id", "point source id"].includes(selectedValue)) {
 
                 } else {
                     blockExtra.css('display', 'block');
                 }
-
-                ////if (selectedValue === 'composite') {
-                //if (selectedValue === attrCompositeTxt) {
-                //    blockWeights.css('display', 'block');
-                //    blockElevation.css('display', 'block');
-                //    blockRGB.css('display', 'block');
-                //    blockIntensity.css('display', 'block');
-                //    //} else if (selectedValue === 'elevation') {
-                //} else if (selectedValue === attrElevationTxt) {
-                //    blockElevation.css('display', 'block');
-                //    //} else if (selectedValue === 'RGB and Elevation') {
-                //} else if (selectedValue === attrRGBElevationTxt) {
-                //    blockRGB.css('display', 'block');
-                //    blockElevation.css('display', 'block');
-                //    //} else if (selectedValue === 'rgba') {
-                //} else if (selectedValue === attrRgbaTxt) {
-                //    blockRGB.css('display', 'block');
-                //    //} else if (selectedValue === 'color') {
-                //} else if (selectedValue === attrColorTxt) {
-                //    blockColor.css('display', 'block');
-                //    //} else if (selectedValue === 'intensity') {
-                //} else if (selectedValue === attrIntensityTxt) {
-                //    blockIntensity.css('display', 'block');
-                //    //} else if (selectedValue === 'intensity gradient') {
-                //} else if (selectedValue === attrIntensityGradientTxt) {
-                //    blockIntensity.css('display', 'block');
-                //    //} else if (selectedValue === "indices") {
-                //} else if (selectedValue === attrIndicesTxt) {
-                //    blockIndex.css('display', 'block');
-                //    //} else if (selectedValue === "matcap") {
-                //} else if (selectedValue === attrMatcapTxt) {
-                //    blockMatcap.css('display', 'block');
-                //    //} else if (selectedValue === "classification") {
-                //} else if (selectedValue === attrClassificationTxt) {
-                //    // add classification color selctor?
-                //    //} else if (selectedValue === "gps-time") {
-                //} else if (selectedValue === attrGPSTimeTxt) {
-                //    blockGps.css('display', 'block');
-                //    //} else if (selectedValue === "number of returns") {
-                //} else if (selectedValue === attrNumberOfReturnsTxt) {
-
-                //    //} else if (selectedValue === "return number") {
-                //} else if (selectedValue === attrReturnNumberTxt) {
-
-                //    //} else if (["source id", "point source id"].includes(selectedValue)) {
-                //} else if ([attrSourceIdTxt, attrPointSourceIdTxt].includes(selectedValue)) {
-
-                //} else {
-                //    blockExtra.css('display', 'block');
-                //}
             };
 
             attributeSelection.selectmenu({ change: updateMaterialPanel });
@@ -884,7 +817,7 @@ export class PropertiesPanel {
 
             {
                 let elGradientRepeat = panel.find("#gradient_repeat_option");
-                elGradientRepeat.selectgroup({ title: "Gradient" });
+                elGradientRepeat.selectgroup({ title: i18n.t("gismatrix.gradient")});
 
                 elGradientRepeat.find("input").click((e) => {
                     this.viewer.setElevationGradientRepeat(ElevationGradientRepeat[e.target.value]);
@@ -938,7 +871,42 @@ export class PropertiesPanel {
 
     }
 
-
+    localizeAttribute(attribute) {
+        switch (attribute) {
+            case "composite":
+                return i18n.t("gismatrix.attrComposite");
+            case "elevation":
+                return i18n.t("gismatrix.attrElevation");
+            case "RGB and Elevation":
+                return i18n.t("gismatrix.attrRGBElevation");
+            case "rgba":
+                return i18n.t("gismatrix.attrRgba");
+            case "color":
+                return i18n.t("gismatrix.attrColor");
+            case "intensity":
+                return i18n.t("gismatrix.attrIntensity");
+            case "intensity gradient":
+                return i18n.t("gismatrix.attrIntensityGradient");
+            case "indices":
+                return i18n.t("gismatrix.attrIndices");
+            case "matcap":
+                return i18n.t("gismatrix.attrMatcap");
+            case "classification":
+                return i18n.t("gismatrix.attrClassification");
+            case "gps-time":
+                return i18n.t("gismatrix.attrGPSTime");
+            case "number of returns":
+                return i18n.t("gismatrix.attrNumberOfReturns");
+            case "return number":
+                return i18n.t("gismatrix.attrReturnNumber");
+            case "source id":
+                return i18n.t("gismatrix.attrSourceId");
+            case "point source id":
+                return i18n.t("gismatrix.attrPointSourceId");
+            case "level of detail":
+                return i18n.t("gismatrix.attrLevelOfDetail");
+        }
+    }
 
     setMeasurement(object) {
 
