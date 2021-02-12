@@ -13,17 +13,17 @@ export class VolumePanel extends MeasurePanel {
         let removeIconPath = Potree.resourcePath + '/icons/remove.svg';
 
         let lblLengthText = new Map([
-            [BoxVolume, "length"],
+            [BoxVolume, i18n.t("gismatrix.length")],
             [SphereVolume, "rx"],
         ]).get(measurement.constructor);
 
         let lblWidthText = new Map([
-            [BoxVolume, "width"],
+            [BoxVolume, i18n.t("gismatrix.widthL")],
             [SphereVolume, "ry"],
         ]).get(measurement.constructor);
 
         let lblHeightText = new Map([
-            [BoxVolume, "height"],
+            [BoxVolume, i18n.t("gismatrix.heightL")],
             [SphereVolume, "rz"],
         ]).get(measurement.constructor);
 
@@ -43,7 +43,7 @@ export class VolumePanel extends MeasurePanel {
 						<td align="center" id="angle_cell_betta" style="width: 33%"></td>
 						<td align="center" id="angle_cell_gamma" style="width: 33%"></td>
 						<td align="right" style="width: 25%">
-							<img name="copyRotation" title="copy" class="button-icon" src="${copyIconPath}" style="width: 16px; height: 16px"/>
+							<img name="copyRotation" title="${i18n.t("gismatrix.copy")}" class="button-icon" src="${copyIconPath}" style="width: 16px; height: 16px"/>
 						</td>
 					</tr>
 				</table>
@@ -60,7 +60,7 @@ export class VolumePanel extends MeasurePanel {
 						<td align="center" id="cell_width" style="width: 33%"></td>
 						<td align="center" id="cell_height" style="width: 33%"></td>
 						<td align="right" style="width: 25%">
-							<img name="copyScale" title="copy" class="button-icon" src="${copyIconPath}" style="width: 16px; height: 16px"/>
+							<img name="copyScale" title="${i18n.t("gismatrix.copy")}" class="button-icon" src="${copyIconPath}" style="width: 16px; height: 16px"/>
 						</td>
 					</tr>
 				</table>
@@ -85,7 +85,7 @@ export class VolumePanel extends MeasurePanel {
 				</li>
 
 				<li style="margin-top: 10px">
-					<input name="download_volume" type="button" value="prepare download" style="width: 100%" />
+					<input name="download_volume" type="button" value="${i18n.t("gismatrix.prepareDownload")}" style="width: 100%" />
 					<div name="download_message"></div>
 				</li>
 

@@ -69,7 +69,7 @@ export class CirclePanel extends MeasurePanel{
 		
 		elInfos.html(`
 			<tr>
-				<th ${thStyle}>Center: </th>
+				<th ${thStyle}>${i18n.t("gismatrix.center")}: </th>
 				<td ${tdStyle}></td>
 			</tr>
 			<tr>
@@ -78,11 +78,11 @@ export class CirclePanel extends MeasurePanel{
 				</td>
 			</tr>
 			<tr>
-				<th ${thStyle}>Radius: </th>
+				<th ${thStyle}>${i18n.t("gismatrix.radius")}: </th>
 				<td ${tdStyle}>${txtRadius}</td>
 			</tr>
 			<tr>
-				<th ${thStyle}>Circumference: </th>
+				<th ${thStyle}>${i18n.t("gismatrix.circumference")}: </th>
 				<td ${tdStyle}>${txtCircumference}</td>
 			</tr>
 		`);

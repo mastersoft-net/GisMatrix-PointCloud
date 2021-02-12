@@ -22,8 +22,8 @@ export class AnnotationTool extends EventDispatcher{
 
 		let annotation = new Annotation({
 			position: [589748.270, 231444.540, 753.675],
-			title: "Annotation Title",
-			description: `Annotation Description`
+			title: i18n.t("gismatrix.annotationTitle"),
+			description: i18n.t("gismatrix.annotationDescription")
 		});
 		this.dispatchEvent({type: 'start_inserting_annotation', annotation: annotation});
 

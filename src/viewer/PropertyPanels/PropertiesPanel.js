@@ -767,7 +767,7 @@ export class PropertiesPanel {
 
                 let range = material.elevationRange;
 
-                panel.find('#lblHeightRange').html(`${range[0].toFixed(2)} to ${range[1].toFixed(2)}`);
+                panel.find('#lblHeightRange').html(`${range[0].toFixed(2)} ${i18n.t("gismatrix.to")} ${range[1].toFixed(2)}`);
                 panel.find('#sldHeightRange').slider({ min: bMin, max: bMax, values: range });
             };
 
@@ -794,7 +794,7 @@ export class PropertiesPanel {
                 }
 
                 if (range) {
-                    let msg = `${range[0].toFixed(2)} to ${range[1].toFixed(2)}`;
+                    let msg = `${range[0].toFixed(2)} ${i18n.t("gismatrix.to")} ${range[1].toFixed(2)}`;
                     panel.find('#lblExtraRange').html(msg);
                 } else {
                     panel.find(i18n.t("gismatrix.couldDeduceRange"));
@@ -804,7 +804,7 @@ export class PropertiesPanel {
             let updateIntensityRange = function () {
                 let range = material.intensityRange;
 
-                panel.find('#lblIntensityRange').html(`${parseInt(range[0])} to ${parseInt(range[1])}`);
+                panel.find('#lblIntensityRange').html(`${parseInt(range[0])} ${i18n.t("gismatrix.to")} ${parseInt(range[1])}`);
             };
 
             {

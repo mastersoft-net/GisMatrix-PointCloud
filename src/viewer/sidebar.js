@@ -75,7 +75,7 @@ export class Sidebar {
                     showArea: false,
                     closed: true,
                     maxMarkers: 3,
-                    name: 'Angle'
+                    name: i18n.t("gismatrix.angle")
                 });
 
                 let measurementsRoot = $("#jstree_scene").jstree().get_json("measurements");
@@ -98,7 +98,7 @@ export class Sidebar {
                     showArea: false,
                     closed: true,
                     maxMarkers: 1,
-                    name: 'Point'
+                    name: i18n.t("gismatrix.point")
                 });
 
                 let measurementsRoot = $("#jstree_scene").jstree().get_json("measurements");
@@ -118,7 +118,7 @@ export class Sidebar {
                     showDistances: true,
                     showArea: false,
                     closed: false,
-                    name: 'Distance'
+                    name: i18n.t("gismatrix.distance")
                 });
 
                 let measurementsRoot = $("#jstree_scene").jstree().get_json("measurements");
@@ -140,7 +140,7 @@ export class Sidebar {
                     showArea: false,
                     closed: false,
                     maxMarkers: 2,
-                    name: 'Height'
+                    name: i18n.t("gismatrix.height")
                 });
 
                 let measurementsRoot = $("#jstree_scene").jstree().get_json("measurements");
@@ -164,7 +164,7 @@ export class Sidebar {
                     showEdges: false,
                     closed: false,
                     maxMarkers: 3,
-                    name: 'Circle'
+                    name: i18n.t("gismatrix.circle")
                 });
 
                 let measurementsRoot = $("#jstree_scene").jstree().get_json("measurements");
@@ -189,7 +189,7 @@ export class Sidebar {
                     showAzimuth: true,
                     closed: false,
                     maxMarkers: 2,
-                    name: 'Azimuth'
+                    name: i18n.t("gismatrix.azimuth")
                 });
 
                 let measurementsRoot = $("#jstree_scene").jstree().get_json("measurements");
@@ -209,7 +209,7 @@ export class Sidebar {
                     showDistances: true,
                     showArea: true,
                     closed: true,
-                    name: 'Area'
+                    name: i18n.t("gismatrix.area")
                 });
 
                 let measurementsRoot = $("#jstree_scene").jstree().get_json("measurements");
@@ -950,7 +950,7 @@ export class Sidebar {
             let onReturnNumberChanged = (event) => {
                 let [from, to] = this.viewer.filterReturnNumberRange;
 
-                lblReturnNumber[0].innerHTML = `${from} to ${to}`;
+                lblReturnNumber[0].innerHTML = `${from} ${i18n.t("gismatrix.to")} ${to}`;
                 sldReturnNumber.slider({ values: [from, to] });
             };
 
@@ -975,7 +975,7 @@ export class Sidebar {
             let onNumberOfReturnsChanged = (event) => {
                 let [from, to] = this.viewer.filterNumberOfReturnsRange;
 
-                lblNumberOfReturns[0].innerHTML = `${from} to ${to}`;
+                lblNumberOfReturns[0].innerHTML = `${from} ${i18n.t("gismatrix.to")} ${to}`;
                 sldNumberOfReturns.slider({ values: [from, to] });
             };
 

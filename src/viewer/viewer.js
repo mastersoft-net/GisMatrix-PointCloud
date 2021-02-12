@@ -1370,6 +1370,8 @@ export class Viewer extends EventDispatcher{
 				return i18n.t("gismatrix.attrLevelOfDetail");
 			case "mileage":
 				return i18n.t("gismatrix.mileage");
+			case "position":
+				return i18n.t("gismatrix.position");
 			default:
 				return attribute;
 		}

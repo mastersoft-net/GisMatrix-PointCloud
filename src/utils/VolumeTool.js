@@ -66,7 +66,7 @@ export class VolumeTool extends EventDispatcher{
 		}
 		
 		volume.clip = args.clip || false;
-		volume.name = args.name || 'Volume';
+		volume.name = args.name || i18n.t("gismatrix.volume");
 
 		this.dispatchEvent({
 			type: 'start_inserting_volume',

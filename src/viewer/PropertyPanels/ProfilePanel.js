@@ -18,7 +18,7 @@ export class ProfilePanel extends MeasurePanel {
 				<br>
 
 				<li style="margin-top: 10px">
-					<input name="download_profile" type="button" value="prepare download" style="width: 100%" />
+					<input name="download_profile" type="button" value="${i18n.t("gismatrix.prepareDownload")}" style="width: 100%" />
 					<div name="download_message"></div>
 				</li>
 

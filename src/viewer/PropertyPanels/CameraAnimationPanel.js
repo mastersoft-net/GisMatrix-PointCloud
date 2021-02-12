@@ -16,7 +16,7 @@ export class CameraAnimationPanel{
 				<span>
 
 					<span style="display:flex">
-						<span style="display:flex; align-items: center; padding-right: 10px">Duration: </span>
+						<span style="display:flex; align-items: center; padding-right: 10px">${i18n.t("gismatrix.duration")}: </span>
 						<input name="spnDuration" value="5.0" style="flex-grow: 1; width:100%">
 					</span>
 

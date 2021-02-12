@@ -22,7 +22,7 @@ export class AnnotationPanel {
 					<td align="center" id="annotation_position_y" style="width: 25%"></td>
 					<td align="center" id="annotation_position_z" style="width: 25%"></td>
 					<td align="right" id="copy_annotation_position" style="width: 25%">
-						<img name="copyPosition" title="copy" class="button-icon" src="${copyIconPath}" style="width: 16px; height: 16px"/>
+						<img name="copyPosition" title="${i18n.t("gismatrix.copy")}" class="button-icon" src="${copyIconPath}" style="width: 16px; height: 16px"/>
 					</td>
 				</tr>
 
@@ -30,16 +30,14 @@ export class AnnotationPanel {
 
 			<div>
 
-				<div class="heading">Title</div>
+				<div class="heading">${i18n.t("gismatrix.title")}</div>
 				<div id="annotation_title" contenteditable="true">
-					Annotation Title
+			            ${i18n.t("gismatrix.annotationTitle")}
 				</div>
 
-				<div class="heading">Description</div>
+				<div class="heading">${i18n.t("gismatrix.description")}</div>
 				<div id="annotation_description" contenteditable="true">
-					A longer description of this annotation. 
-						Can be multiple lines long. TODO: the user should be able
-						to modify title and description. 
+                                ${i18n.t("gismatrix.annotationDescription")}
 				</div>
 
 			</div>

@@ -17,7 +17,7 @@ export class DistancePanel extends MeasurePanel{
 				<!-- ACTIONS -->
 				<div style="display: flex; margin-top: 12px">
 					<span>
-						<input type="button" name="make_profile" value="profile from measure" />
+						<input type="button" name="make_profile" value="${i18n.t("gismatrix.profileFromMeasure")}" />
 					</span>
 					<span style="flex-grow: 1"></span>
 					<img name="remove" class="button-icon" src="${removeIconPath}" style="width: 16px; height: 16px"/>
@@ -70,7 +70,7 @@ export class DistancePanel extends MeasurePanel{
 		elDistanceTable.empty();
 
 		for (let i = 0; i < distances.length; i++) {
-			let label = (i === 0) ? 'Distances: ' : '';
+			let label = (i === 0) ? i18n.t("gismatrix.distances") : '';
 			let distance = distances[i];
 			let elDistance = $(`
 				<tr>
@@ -82,7 +82,7 @@ export class DistancePanel extends MeasurePanel{
 
 		let elTotal = $(`
 			<tr>
-				<th>Total: </td><td style="width: 100%; padding-left: 10px">${totalDistance}</th>
+				<th>${i18n.t("gismatrix.total")}</td><td style="width: 100%; padding-left: 10px">${totalDistance}</th>
 			</tr>`);
 		elDistanceTable.append(elTotal);
 	}
