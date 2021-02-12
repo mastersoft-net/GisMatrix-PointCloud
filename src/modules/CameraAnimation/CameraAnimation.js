@@ -40,7 +40,7 @@ export class CameraAnimation extends EventDispatcher{
 		this.frustum = this.createFrustum();
 		this.node.add(this.frustum);
 
-		this.name = "Camera Animation";
+		this.name = i18n.t("tt.camera_animation");
 		this.duration = 5;
 		this.t = 0;
 		// "centripetal", "chordal", "catmullrom"

@@ -1,17 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\examples",
-    "\\examples\\showcase",
-    "\\resources",
-    "\\resources\\lang",
-    "\\resources\\lang\\en",
+    "\\libs",
+    "\\libs\\spectrum",
     "\\src",
     "\\src\\exporter",
+    "\\src\\materials",
     "\\src\\utils",
     "\\src\\viewer",
-    "\\src\\viewer\\PropertyPanels"
+    "\\src\\viewer\\PropertyPanels",
+    "\\src\\workers"
   ],
-  "SelectedNode": "\\src\\extensions",
+  "SelectedNode": "\\src\\viewer\\PropertyPanels\\ProfilePanel.js",
   "PreviewInSolutionExplorer": false
 }

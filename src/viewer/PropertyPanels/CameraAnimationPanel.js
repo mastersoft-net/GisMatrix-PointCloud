@@ -22,7 +22,7 @@ export class CameraAnimationPanel{
 
 					<span>${timeTxt}</span><span id="lblTime"></span> <div id="sldTime"></div>
 
-					<input name="play" type="button" value="play"/>
+					<input name="play" type="button" value="${i18n.t("gismatrix.play")}"/>
 				</span>
 			</div>
 		`);
@@ -88,7 +88,7 @@ export class CameraAnimationPanel{
 				let elNewKeyframe = $(`
 					<div style="display: flex; margin: 0.2em 0em">
 						<span style="flex-grow: 1"></span>
-						<input type="button" name="add" value="insert control point" />
+						<input type="button" name="add" value="${i18n.t("gismatrix.insertControlPoint")}" />
 						<span style="flex-grow: 1"></span>
 					</div>
 				`);
@@ -111,7 +111,7 @@ export class CameraAnimationPanel{
 							<img name="move" src="${Potree.resourcePath}/icons/circled_dot.svg" style="width: 1.5em; height: 1.5em"/>
 						</span>
 						<span style="flex-grow: 0; width: 1.5em; height: 1.5em"></span>
-						<span style="flex-grow: 0; font-size: 1.5em">keyframe</span>
+						<span style="flex-grow: 0; font-size: 1.5em">${i18n.t("gismatrix.keyframe")}</span>
 						<span style="flex-grow: 1"></span>
 						<span style="flex-grow: 0;">
 							<img name="delete" src="${Potree.resourcePath}/icons/remove.svg" style="width: 1.5em; height: 1.5em"/>

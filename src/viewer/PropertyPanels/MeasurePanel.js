@@ -52,7 +52,7 @@ export class MeasurePanel{
 				//	{ duration: 3000 });
 
 				this.viewer.postMessage(
-					`${i18n.t("gismatrix.CopiedToClipboard")}: <br>'${msg}'`,
+					`${i18n.t("gismatrix.copiedToClipboard")}: <br>'${msg}'`,
 					{duration: 3000});
 			});
 

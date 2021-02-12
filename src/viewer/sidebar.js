@@ -646,7 +646,7 @@ export class Sidebar {
             const animation = e.animation;
 
             const animationIcon = `${Potree.resourcePath}/icons/camera_animation.svg`;
-            createNode(otherID, "animation", animationIcon, animation);
+            createNode(otherID, i18n.t("gismatrix.animation"), animationIcon, animation);
         };
 
         let onOrientedImagesAdded = (e) => {

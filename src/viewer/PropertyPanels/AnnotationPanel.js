@@ -14,7 +14,7 @@ export class AnnotationPanel {
 		<div class="propertypanel_content">
 			<table>
 				<tr>
-					<th colspan="3">position</th>
+					<th colspan="3">${i18n.t("gismatrix.position")}</th>
 					<th></th>
 				</tr>
 				<tr>
@@ -57,7 +57,7 @@ export class AnnotationPanel {
             //		`Copied value to clipboard: <br>'${msg}'`,
             //		{duration: 3000});
             this.viewer.postMessage(
-                `${i18n.t("gismatrix.CopiedToClipboard")}: <br>'${msg}'`,
+                `${i18n.t("gismatrix.copiedToClipboard")}: <br>'${msg}'`,
                 { duration: 3000 });
         });
 

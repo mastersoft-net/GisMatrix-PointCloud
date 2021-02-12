@@ -109,7 +109,7 @@ export class BoxVolume extends Volume{
 		super(args);
 
 		this.constructor.counter = (this.constructor.counter === undefined) ? 0 : this.constructor.counter + 1;
-		this.name = 'box_' + this.constructor.counter;
+		this.name = i18n.t("gismatrix.volumeBox") + "_" + this.constructor.counter;
 
 		let boxGeometry = new THREE.BoxGeometry(1, 1, 1);
 		boxGeometry.computeBoundingBox();

@@ -13,7 +13,7 @@ export class CameraPanel{
 		<div class="propertypanel_content">
 			<table>
 				<tr>
-					<th colspan="3">position</th>
+					<th colspan="3">${i18n.t("gismatrix.position")}</th>
 					<th></th>
 				</tr>
 				<tr>
@@ -25,7 +25,7 @@ export class CameraPanel{
 					</td>
 				</tr>
 				<tr>
-					<th colspan="3">target</th>
+					<th colspan="3">${i18n.t("gismatrix.target")}</th>
 					<th></th>
 				</tr>
 				<tr>
@@ -51,7 +51,7 @@ export class CameraPanel{
 			//	{ duration: 3000 });
 
 			this.viewer.postMessage(
-				`${i18n.t("gismatrix.CopiedToClipboard")}: <br>'${msg}'`,
+				`${i18n.t("gismatrix.copiedToClipboard")}: <br>'${msg}'`,
 					{duration: 3000});
 		});
 
@@ -66,7 +66,7 @@ export class CameraPanel{
 			//	{ duration: 3000 });
 
 			this.viewer.postMessage(
-					`${i18n.t("gismatrix.CopiedToClipboard")}: <br>'${msg}'`,
+					`${i18n.t("gismatrix.copiedToClipboard")}: <br>'${msg}'`,
 					{duration: 3000});
 		});
 
