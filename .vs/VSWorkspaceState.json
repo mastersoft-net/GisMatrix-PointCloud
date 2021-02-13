@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\build",
+    "\\examples\\showcase",
     "\\libs",
-    "\\libs\\spectrum",
+    "\\libs\\three.js",
+    "\\libs\\three.js\\build",
+    "\\libs\\three.js\\loaders",
+    "\\libs\\three.js\\webxr",
     "\\src",
-    "\\src\\exporter",
-    "\\src\\materials",
-    "\\src\\utils",
-    "\\src\\viewer",
-    "\\src\\viewer\\PropertyPanels",
-    "\\src\\workers"
+    "\\src\\viewer"
   ],
-  "SelectedNode": "\\src\\viewer\\PropertyPanels\\ProfilePanel.js",
+  "SelectedNode": "\\libs\\three.js\\build\\three.module.js",
   "PreviewInSolutionExplorer": false
 }

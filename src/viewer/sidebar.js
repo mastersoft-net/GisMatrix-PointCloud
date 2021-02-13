@@ -289,7 +289,7 @@ export class Sidebar {
 
         { // SHOW / HIDE Measurements
             let elShow = $("#measurement_options_show");
-            elShow.selectgroup({ title: "Show/Hide labels" });
+            elShow.selectgroup({ title: i18n.t("gismatrix.showHideLabels") });
 
             elShow.find("input").click((e) => {
                 const show = e.target.value === "SHOW";
@@ -1581,7 +1581,7 @@ export class Sidebar {
 
         {
             let elSplatQuality = $("#splat_quality_options");
-            elSplatQuality.selectgroup({ title: "Splat Quality" });
+            elSplatQuality.selectgroup({ title: i18n.t("gismatrix.splatQuality") });
 
             elSplatQuality.find("input").click((e) => {
                 if (e.target.value === "standard") {
