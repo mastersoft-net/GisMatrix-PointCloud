@@ -1487,6 +1487,7 @@ export class Viewer extends EventDispatcher {
         this.renderer.domElement.addEventListener('mousedown', () => {
             this.renderer.domElement.focus();
         });
+        this.renderer.setPixelRatio(window.devicePixelRatio); // https://github.com/potree/potree/issues/905
         //this.renderer.domElement.focus();
 
         // NOTE: If extension errors occur, pass the string into this.renderer.extensions.get(x) before enabling
