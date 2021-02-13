@@ -1129,6 +1129,12 @@ export class Sidebar {
     initClassificationList() {
         let elClassificationList = $('#classificationList');
 
+        const localizeClassificationItem = (code, name) => {
+            const value = i18n.t("gismatrix.classification." + code);
+
+            return value ? value : name;
+        };
+
         let addClassificationItem = (code, name) => {
             const classification = this.viewer.classifications[code];
             const inputID = 'chkClassification_' + code;
@@ -1140,7 +1146,7 @@ export class Sidebar {
 				<li>
 					<label style="whitespace: nowrap; display: flex">
 						<input id="${inputID}" type="checkbox" ${checked}/>
-						<span style="flex-grow: 1">${name}</span>
+						<span style="flex-grow: 1">${localizeClassificationItem(code, name)}</span>
 						<input id="${colorPickerID}" style="zoom: 0.5" />
 					</label>
 				</li>
@@ -1512,8 +1518,6 @@ export class Sidebar {
             "[title]tt.bottom_view_control",
             () => { this.viewer.setBottomView(); }
         ));
-
-
 
         const cameraProjectionTxt = i18n.t("gismatrix.cameraProjection");
         const cameraPerspectiveTxt = i18n.t("gismatrix.cPrspective");

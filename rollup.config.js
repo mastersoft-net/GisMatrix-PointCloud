@@ -12,7 +12,7 @@ export default [
 		},
 		plugins: [
 			minify({
-				minimize: false,
+				minimize: true,
 				fileSuffix: ''
 			})
 		]
