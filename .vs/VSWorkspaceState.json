@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\build",
-    "\\examples\\showcase",
     "\\libs",
-    "\\libs\\three.js",
-    "\\libs\\three.js\\build",
-    "\\libs\\three.js\\loaders",
-    "\\libs\\three.js\\webxr",
+    "\\libs\\geopackage",
+    "\\libs\\jstree\\themes",
+    "\\libs\\jstree\\themes\\mixed",
+    "\\libs\\spectrum",
     "\\src",
-    "\\src\\viewer"
+    "\\src\\utils",
+    "\\src\\viewer",
+    "\\src\\workers"
   ],
-  "SelectedNode": "\\libs\\three.js\\build\\three.module.js",
+  "SelectedNode": "\\libs\\spectrum\\spectrum.js",
   "PreviewInSolutionExplorer": false
 }
