@@ -345,10 +345,10 @@ export class Viewer extends EventDispatcher {
             let elFailPage = $(`
 			<div id="#potree_failpage" class="potree_failpage"> 
 				
-				<h1>Point Cloud Viewer Encountered An Error</h1>
+				<h1>${i18n.t("gismatrix.pcError")}</h1>
 
 				<p>
-				This may happen if your platform or graphics card is not supported.
+                ${i18n.t("gismatrix.webGLErr")}
 				<br>
 
 				<pre id="potree_error_console" style="width: 100%; height: 100%"></pre>
