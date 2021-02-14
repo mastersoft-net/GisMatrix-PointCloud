@@ -15,6 +15,8 @@ import { BoxVolume } from "../utils/Volume.js";
 import { Features } from "../Features.js";
 import { Message } from "../utils/Message.js";
 import { Sidebar } from "./sidebar.js";
+import { TouchActions } from "./TouchActions.js";
+import { Env } from "./Env.js";
 
 import { AnnotationTool } from "../utils/AnnotationTool.js";
 import { MeasuringTool } from "../utils/MeasuringTool.js";
@@ -40,6 +42,8 @@ export class Viewer extends EventDispatcher {
 
     constructor(domElement, args = {}) {
         super();
+
+        Env.init();
 
         this.renderArea = domElement;
         this.guiLoaded = false;
@@ -1194,6 +1198,17 @@ export class Viewer extends EventDispatcher {
 
         let viewer = this;
         let sidebarContainer = $('#potree_sidebar_container');
+
+        if (Env.mobile) {
+            new TouchActions({
+                element: document.getElementById("potree_sidebar_container"),
+                onSwipeLeft: () => {
+                    this.toggleSidebar();
+                }
+            });
+        }
+
+
         sidebarContainer.load(new URL(Potree.scriptPath + '/sidebar.html').href, () => {
             sidebarContainer.css('width', '300px');
             sidebarContainer.css('height', '100%');

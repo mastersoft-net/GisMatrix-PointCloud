@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\examples",
+    "\\examples\\showcase",
     "\\libs",
-    "\\libs\\geopackage",
     "\\libs\\spectrum",
     "\\src",
     "\\src\\utils",
@@ -10,6 +11,6 @@
     "\\src\\viewer\\PropertyPanels",
     "\\src\\workers"
   ],
-  "SelectedNode": "\\src\\viewer\\PropertyPanels\\PropertiesPanel.js",
+  "SelectedNode": "\\src\\viewer\\viewer.js",
   "PreviewInSolutionExplorer": false
 }
