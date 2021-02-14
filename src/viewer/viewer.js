@@ -1199,7 +1199,7 @@ export class Viewer extends EventDispatcher {
         let viewer = this;
         let sidebarContainer = $('#potree_sidebar_container');
 
-        if (Env.mobile) {
+        if (this.args_.mobile) {
             new TouchActions({
                 element: document.getElementById("potree_sidebar_container"),
                 onSwipeLeft: () => {
