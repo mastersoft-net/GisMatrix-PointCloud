@@ -1448,7 +1448,7 @@ export class Viewer extends EventDispatcher {
 
     initThree() {
 
-        console.log(`initializing three.js ${THREE.REVISION}`);
+       // console.log(`initializing three.js ${THREE.REVISION}`);
 
         let width = this.renderArea.clientWidth;
         let height = this.renderArea.clientHeight;
@@ -1460,7 +1460,7 @@ export class Viewer extends EventDispatcher {
             antialias: false,
             //premultipliedAlpha: _premultipliedAlpha,
             preserveDrawingBuffer: true,
-            powerPreference: "high-performance",
+            powerPreference: this.args_.mobile ? undefined : "high-performance",
         };
 
         // let contextAttributes = {

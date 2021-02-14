@@ -7,8 +7,9 @@
     "\\src",
     "\\src\\utils",
     "\\src\\viewer",
+    "\\src\\viewer\\PropertyPanels",
     "\\src\\workers"
   ],
-  "SelectedNode": "\\src\\viewer\\viewer.js",
+  "SelectedNode": "\\src\\viewer\\PropertyPanels\\PropertiesPanel.js",
   "PreviewInSolutionExplorer": false
 }
