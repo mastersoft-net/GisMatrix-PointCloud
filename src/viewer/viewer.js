@@ -1369,6 +1369,11 @@ export class Viewer extends EventDispatcher {
                 return i18n.t("gismatrix.mileage");
             case "position":
                 return i18n.t("gismatrix.position");
+            case "user data":
+                return i18n.t("gismatrix.userData");
+            case "scan angle rang":
+                return i18n.t("gismatrix.scanAngleRang");
+
         }
     }
 

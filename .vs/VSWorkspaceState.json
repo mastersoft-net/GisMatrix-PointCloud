@@ -9,6 +9,6 @@
     "\\src\\viewer",
     "\\src\\workers"
   ],
-  "SelectedNode": "\\libs\\spectrum\\spectrum.js",
+  "SelectedNode": "\\src\\viewer\\viewer.js",
   "PreviewInSolutionExplorer": false
 }
