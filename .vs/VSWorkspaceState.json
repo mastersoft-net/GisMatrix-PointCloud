@@ -1,14 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\examples",
-    "\\examples\\showcase",
-    "\\libs",
-    "\\libs\\spectrum",
     "\\src",
     "\\src\\utils",
     "\\src\\viewer",
-    "\\src\\viewer\\PropertyPanels",
     "\\src\\workers"
   ],
   "SelectedNode": "\\src\\viewer\\viewer.js",
