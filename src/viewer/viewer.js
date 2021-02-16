@@ -1399,11 +1399,11 @@ export class Viewer extends EventDispatcher {
         }
 
         let dropHandler = async (event) => {
-            console.log(event);
+            //console.log(event);
             event.preventDefault();
 
             for (const item of event.dataTransfer.items) {
-                console.log(item);
+              //  console.log(item);
 
                 if (item.kind !== "file") {
                     continue;

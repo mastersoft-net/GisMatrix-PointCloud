@@ -268,7 +268,7 @@ export class SphereVolume extends Volume{
 				uh = (1 - uh) * (-Math.PI / 2) + uh *(Math.PI / 2);
 				let height = Math.sin(uh);
 
-				console.log(uh, height);
+				// console.log(uh, height);
 
 				for(let i = 0; i <= steps; i++){
 					let u = (i / steps) * Math.PI * 2;
