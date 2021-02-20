@@ -654,15 +654,17 @@ export class ProfileWindow extends EventDispatcher {
 		this.pickSphere = new THREE.Mesh(sg, sm);
 		this.scene.add(this.pickSphere);
 
-		{
-			const sg = new THREE.SphereGeometry(2);
-			const sm = new THREE.MeshNormalMaterial();
-			const s = new THREE.Mesh(sg, sm);
+		// Merge pull request #959 from bmichalowski/profile-remove-hardcoced-cords
+		// https://github.com/potree/potree/commit/37dc46a25ca56683e216c973dd117bc68b75ab0f
+		//{
+		//	const sg = new THREE.SphereGeometry(2);
+		//	const sm = new THREE.MeshNormalMaterial();
+		//	const s = new THREE.Mesh(sg, sm);
 
-			s.position.set(589530.450, 231398.860, 769.735);
+		//	s.position.set(589530.450, 231398.860, 769.735);
 
-			this.scene.add(s);
-		}
+		//	this.scene.add(s);
+		//}
 
 		this.viewerPickSphere = new THREE.Mesh(sg, sm);
 	}

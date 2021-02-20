@@ -1000,6 +1000,12 @@ export class Viewer extends EventDispatcher {
         //Potree.loadProject(this, url);
     }
 
+    loadProjectJSON(json) {
+        if (json.type === "Potree") {
+            Potree.loadProject(viewer, json);
+        }
+    }
+
     saveProject() {
         return Potree.saveProject(this);
     }
@@ -1274,7 +1280,7 @@ export class Viewer extends EventDispatcher {
                 resGetPath: Potree.resourcePath + '/lang/__lng__/__ns__.json',
                 preload: ['en', 'fr', 'de', 'jp', 'se', 'es'],
                 getAsync: false,
-                debug: true
+                debug: false
             });
             //}, function (t) {
             //	// Start translation once everything is loaded
@@ -1403,7 +1409,7 @@ export class Viewer extends EventDispatcher {
             event.preventDefault();
 
             for (const item of event.dataTransfer.items) {
-              //  console.log(item);
+                //  console.log(item);
 
                 if (item.kind !== "file") {
                     continue;
@@ -1463,7 +1469,7 @@ export class Viewer extends EventDispatcher {
 
     initThree() {
 
-       // console.log(`initializing three.js ${THREE.REVISION}`);
+        // console.log(`initializing three.js ${THREE.REVISION}`);
 
         let width = this.renderArea.clientWidth;
         let height = this.renderArea.clientHeight;

@@ -1,12 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
     "\\src\\exporter",
+    "\\src\\modules",
+    "\\src\\modules\\loader",
+    "\\src\\modules\\loader\\2.0",
     "\\src\\utils",
     "\\src\\viewer",
     "\\src\\workers"
   ],
-  "SelectedNode": "\\src\\exporter\\DXFExporter.js",
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }
