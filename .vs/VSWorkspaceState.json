@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\exporter",
     "\\src\\loader",
-    "\\src\\modules",
-    "\\src\\modules\\loader",
-    "\\src\\modules\\loader\\2.0",
+    "\\src\\loader\\ept",
+    "\\src\\navigation",
+    "\\src\\tools",
     "\\src\\utils",
     "\\src\\viewer",
+    "\\src\\viewer\\PropertyPanels",
     "\\src\\workers"
   ],
-  "SelectedNode": "\\rollup.config.js",
+  "SelectedNode": "\\src\\PointCloudOctree.js",
   "PreviewInSolutionExplorer": false
 }

@@ -512,7 +512,7 @@ export class PointCloudArena4D extends PointCloudTree{
 
 	computeVisibilityTextureData(nodes){
 
-		if(exports.measureTimings) performance.mark("computeVisibilityTextureData-start");
+		//if(exports.measureTimings) performance.mark("computeVisibilityTextureData-start");
 
 		let data = new Uint8Array(nodes.length * 3);
 		let visibleNodeTextureOffsets = new Map();
@@ -569,10 +569,10 @@ export class PointCloudArena4D extends PointCloudTree{
 			data[i * 3 + 2] = b3;
 		}
 
-		if(exports.measureTimings){
-			performance.mark("computeVisibilityTextureData-end");
-			performance.measure("render.computeVisibilityTextureData", "computeVisibilityTextureData-start", "computeVisibilityTextureData-end");
-		}
+		//if(exports.measureTimings){
+		//	performance.mark("computeVisibilityTextureData-end");
+		//	performance.measure("render.computeVisibilityTextureData", "computeVisibilityTextureData-start", "computeVisibilityTextureData-end");
+		//}
 
 		return {
 			data: data,

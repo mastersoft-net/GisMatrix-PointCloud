@@ -1683,7 +1683,7 @@ export class Viewer extends EventDispatcher {
 
     update(delta, timestamp) {
 
-        if (Potree.measureTimings) performance.mark("update-start");
+        //if (Potree.measureTimings) performance.mark("update-start");
 
         this.dispatchEvent({
             type: 'update_start',
@@ -1959,10 +1959,10 @@ export class Viewer extends EventDispatcher {
             timestamp: timestamp
         });
 
-        if (Potree.measureTimings) {
-            performance.mark("update-end");
-            performance.measure("update", "update-start", "update-end");
-        }
+        //if (Potree.measureTimings) {
+        //    performance.mark("update-end");
+        //    performance.measure("update", "update-start", "update-end");
+        //}
     }
 
     getPRenderer() {
@@ -2185,7 +2185,7 @@ export class Viewer extends EventDispatcher {
     }
 
     render() {
-        if (Potree.measureTimings) performance.mark("render-start");
+        //if (Potree.measureTimings) performance.mark("render-start");
 
         try {
 
@@ -2201,111 +2201,111 @@ export class Viewer extends EventDispatcher {
             this.onCrash(e);
         }
 
-        if (Potree.measureTimings) {
-            performance.mark("render-end");
-            performance.measure("render", "render-start", "render-end");
-        }
+        //if (Potree.measureTimings) {
+        //    performance.mark("render-end");
+        //    performance.measure("render", "render-start", "render-end");
+        //}
     }
 
-    resolveTimings(timestamp) {
-        if (Potree.measureTimings) {
-            if (!this.toggle) {
-                this.toggle = timestamp;
-            }
-            let duration = timestamp - this.toggle;
-            if (duration > 1000.0) {
+    //resolveTimings(timestamp) {
+        //if (Potree.measureTimings) {
+            //    if (!this.toggle) {
+            //        this.toggle = timestamp;
+            //    }
+            //    let duration = timestamp - this.toggle;
+            //    if (duration > 1000.0) {
 
-                let measures = performance.getEntriesByType("measure");
+            //        let measures = performance.getEntriesByType("measure");
 
-                let names = new Set();
-                for (let measure of measures) {
-                    names.add(measure.name);
-                }
+            //        let names = new Set();
+            //        for (let measure of measures) {
+            //            names.add(measure.name);
+            //        }
 
-                let groups = new Map();
-                for (let name of names) {
-                    groups.set(name, {
-                        measures: [],
-                        sum: 0,
-                        n: 0,
-                        min: Infinity,
-                        max: -Infinity
-                    });
-                }
+            //        let groups = new Map();
+            //        for (let name of names) {
+            //            groups.set(name, {
+            //                measures: [],
+            //                sum: 0,
+            //                n: 0,
+            //                min: Infinity,
+            //                max: -Infinity
+            //            });
+            //        }
 
-                for (let measure of measures) {
-                    let group = groups.get(measure.name);
-                    group.measures.push(measure);
-                    group.sum += measure.duration;
-                    group.n++;
-                    group.min = Math.min(group.min, measure.duration);
-                    group.max = Math.max(group.max, measure.duration);
-                }
+            //        for (let measure of measures) {
+            //            let group = groups.get(measure.name);
+            //            group.measures.push(measure);
+            //            group.sum += measure.duration;
+            //            group.n++;
+            //            group.min = Math.min(group.min, measure.duration);
+            //            group.max = Math.max(group.max, measure.duration);
+            //        }
 
-                let glQueries = Potree.resolveQueries(this.renderer.getContext());
-                for (let [key, value] of glQueries) {
+            //        let glQueries = Potree.resolveQueries(this.renderer.getContext());
+            //        for (let [key, value] of glQueries) {
 
-                    let group = {
-                        measures: value.map(v => { return { duration: v }; }),
-                        sum: value.reduce((a, i) => a + i, 0),
-                        n: value.length,
-                        min: Math.min(...value),
-                        max: Math.max(...value)
-                    };
+            //            let group = {
+            //                measures: value.map(v => { return { duration: v }; }),
+            //                sum: value.reduce((a, i) => a + i, 0),
+            //                n: value.length,
+            //                min: Math.min(...value),
+            //                max: Math.max(...value)
+            //            };
 
-                    let groupname = `[tq] ${key}`;
-                    groups.set(groupname, group);
-                    names.add(groupname);
-                }
+            //            let groupname = `[tq] ${key}`;
+            //            groups.set(groupname, group);
+            //            names.add(groupname);
+            //        }
 
-                for (let [name, group] of groups) {
-                    group.mean = group.sum / group.n;
-                    group.measures.sort((a, b) => a.duration - b.duration);
+            //        for (let [name, group] of groups) {
+            //            group.mean = group.sum / group.n;
+            //            group.measures.sort((a, b) => a.duration - b.duration);
 
-                    if (group.n === 1) {
-                        group.median = group.measures[0].duration;
-                    } else if (group.n > 1) {
-                        group.median = group.measures[parseInt(group.n / 2)].duration;
-                    }
+            //            if (group.n === 1) {
+            //                group.median = group.measures[0].duration;
+            //            } else if (group.n > 1) {
+            //                group.median = group.measures[parseInt(group.n / 2)].duration;
+            //            }
 
-                }
+            //        }
 
-                let cn = Array.from(names).reduce((a, i) => Math.max(a, i.length), 0) + 5;
-                let cmin = 10;
-                let cmed = 10;
-                let cmax = 10;
-                let csam = 6;
+            //        let cn = Array.from(names).reduce((a, i) => Math.max(a, i.length), 0) + 5;
+            //        let cmin = 10;
+            //        let cmed = 10;
+            //        let cmax = 10;
+            //        let csam = 6;
 
-                let message = ` ${"NAME".padEnd(cn)} |`
-                    + ` ${"MIN".padStart(cmin)} |`
-                    + ` ${"MEDIAN".padStart(cmed)} |`
-                    + ` ${"MAX".padStart(cmax)} |`
-                    + ` ${"SAMPLES".padStart(csam)} \n`;
-                message += ` ${"-".repeat(message.length)}\n`;
+            //        let message = ` ${"NAME".padEnd(cn)} |`
+            //            + ` ${"MIN".padStart(cmin)} |`
+            //            + ` ${"MEDIAN".padStart(cmed)} |`
+            //            + ` ${"MAX".padStart(cmax)} |`
+            //            + ` ${"SAMPLES".padStart(csam)} \n`;
+            //        message += ` ${"-".repeat(message.length)}\n`;
 
-                names = Array.from(names).sort();
-                for (let name of names) {
-                    let group = groups.get(name);
-                    let min = group.min.toFixed(3);
-                    let median = group.median.toFixed(3);
-                    let max = group.max.toFixed(3);
-                    let n = group.n;
+            //        names = Array.from(names).sort();
+            //        for (let name of names) {
+            //            let group = groups.get(name);
+            //            let min = group.min.toFixed(3);
+            //            let median = group.median.toFixed(3);
+            //            let max = group.max.toFixed(3);
+            //            let n = group.n;
 
-                    message += ` ${name.padEnd(cn)} |`
-                        + ` ${min.padStart(cmin)} |`
-                        + ` ${median.padStart(cmed)} |`
-                        + ` ${max.padStart(cmax)} |`
-                        + ` ${n.toString().padStart(csam)}\n`;
-                }
-                message += `\n`;
-                console.log(message);
+            //            message += ` ${name.padEnd(cn)} |`
+            //                + ` ${min.padStart(cmin)} |`
+            //                + ` ${median.padStart(cmed)} |`
+            //                + ` ${max.padStart(cmax)} |`
+            //                + ` ${n.toString().padStart(csam)}\n`;
+            //        }
+            //        message += `\n`;
+            //        console.log(message);
 
-                performance.clearMarks();
-                performance.clearMeasures();
-                this.toggle = timestamp;
-            }
-        }
-    }
+            //        performance.clearMarks();
+            //        performance.clearMeasures();
+            //        this.toggle = timestamp;
+            //    }
+        //}
+    //}
 
     loop(timestamp) {
 
@@ -2313,9 +2313,9 @@ export class Viewer extends EventDispatcher {
             this.stats.begin();
         }
 
-        if (Potree.measureTimings) {
-            performance.mark("loop-start");
-        }
+        //if (Potree.measureTimings) {
+        //    performance.mark("loop-start");
+        //}
 
         this.update(this.clock.getDelta(), timestamp);
         this.render();
@@ -2331,12 +2331,12 @@ export class Viewer extends EventDispatcher {
         // }
 
 
-        if (Potree.measureTimings) {
-            performance.mark("loop-end");
-            performance.measure("loop", "loop-start", "loop-end");
-        }
+        //if (Potree.measureTimings) {
+        //    performance.mark("loop-end");
+        //    performance.measure("loop", "loop-start", "loop-end");
+        //}
 
-        this.resolveTimings(timestamp);
+        //this.resolveTimings(timestamp);
 
         Potree.framenumber++;
 

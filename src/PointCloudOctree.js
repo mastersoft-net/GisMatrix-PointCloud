@@ -320,7 +320,7 @@ export class PointCloudOctree extends PointCloudTree {
 
 	computeVisibilityTextureData(nodes, camera){
 
-		if(Potree.measureTimings) performance.mark("computeVisibilityTextureData-start");
+		//if(Potree.measureTimings) performance.mark("computeVisibilityTextureData-start");
 
 		let data = new Uint8Array(nodes.length * 4);
 		let visibleNodeTextureOffsets = new Map();
@@ -379,10 +379,10 @@ export class PointCloudOctree extends PointCloudTree {
 
 		}
 
-		if(Potree.measureTimings){
-			performance.mark("computeVisibilityTextureData-end");
-			performance.measure("render.computeVisibilityTextureData", "computeVisibilityTextureData-start", "computeVisibilityTextureData-end");
-		}
+		//if(Potree.measureTimings){
+		//	performance.mark("computeVisibilityTextureData-end");
+		//	performance.measure("render.computeVisibilityTextureData", "computeVisibilityTextureData-start", "computeVisibilityTextureData-end");
+		//}
 
 		return {
 			data: data,

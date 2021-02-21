@@ -325,10 +325,10 @@ class Shader {
             this.cache.set(`${this.vsSource}, ${this.fsSource}`, cached);
         }
 
-        const tEnd = performance.now();
-        const duration = tEnd - tStart;
+      //  const tEnd = performance.now();
+      //  const duration = tEnd - tStart;
 
-        console.log(`shader compile duration: ${duration.toFixed(3)}`);
+      //  console.log(`shader compile duration: ${duration.toFixed(3)}`);
 
 
     }
@@ -697,7 +697,7 @@ export class Renderer {
 
     renderNodes(octree, nodes, visibilityTextureData, camera, target, shader, params) {
 
-        if (exports.measureTimings) performance.mark("renderNodes-start");
+       // if (exports.measureTimings) performance.mark("renderNodes-start");
 
         let gl = this.gl;
 
@@ -1034,10 +1034,10 @@ export class Renderer {
 
         gl.bindVertexArray(null);
 
-        if (exports.measureTimings) {
-            performance.mark("renderNodes-end");
-            performance.measure("render.renderNodes", "renderNodes-start", "renderNodes-end");
-        }
+        //if (exports.measureTimings) {
+        //    performance.mark("renderNodes-end");
+        //    performance.measure("render.renderNodes", "renderNodes-start", "renderNodes-end");
+        //}
     }
 
     renderOctree(octree, nodes, camera, target, params = {}) {
