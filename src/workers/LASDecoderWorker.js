@@ -1,7 +1,7 @@
 
 function readUsingTempArrays(event) {
 
-	performance.mark("laslaz-start");
+	// performance.mark("laslaz-start");
 
 	let buffer = event.data.buffer;
 	let numPoints = event.data.numPoints;
@@ -139,16 +139,16 @@ function readUsingTempArrays(event) {
 		iIndices[i] = i;
 	}
 
-	performance.mark("laslaz-end");
-	performance.measure("laslaz", "laslaz-start", "laslaz-end");
+	//performance.mark("laslaz-end");
+	//performance.measure("laslaz", "laslaz-start", "laslaz-end");
 
-	let measure = performance.getEntriesByType("measure")[0];
-	let dpp = 1000 * measure.duration / numPoints;
-	let debugMessage = `${measure.duration.toFixed(3)} ms, ${numPoints} points, ${dpp.toFixed(3)} micros / point`;
-	console.log(debugMessage);
+	//let measure = performance.getEntriesByType("measure")[0];
+	//let dpp = 1000 * measure.duration / numPoints;
+	//let debugMessage = `${measure.duration.toFixed(3)} ms, ${numPoints} points, ${dpp.toFixed(3)} micros / point`;
+	//console.log(debugMessage);
 
-	performance.clearMarks();
-	performance.clearMeasures();
+	//performance.clearMarks();
+	//performance.clearMeasures();
 
 	let message = {
 		mean: mean,
@@ -181,7 +181,7 @@ function readUsingTempArrays(event) {
 
 function readUsingDataView(event) {
 
-	performance.mark("laslaz-start");
+	//performance.mark("laslaz-start");
 
 	let buffer = event.data.buffer;
 	let numPoints = event.data.numPoints;
@@ -301,7 +301,7 @@ function readUsingDataView(event) {
 		iIndices[i] = i;
 	}
 
-	performance.mark("laslaz-end");
+	//performance.mark("laslaz-end");
 
 	//{ // print timings
 	//	performance.measure("laslaz", "laslaz-start", "laslaz-end");
@@ -310,8 +310,8 @@ function readUsingDataView(event) {
 	//	let debugMessage = `${measure.duration.toFixed(3)} ms, ${numPoints} points, ${dpp.toFixed(3)} µs / point`;
 	//	console.log(debugMessage);
 	//}
-	performance.clearMarks();
-	performance.clearMeasures();
+	//performance.clearMarks();
+	//performance.clearMeasures();
 
 	const ranges = {
 		"intensity": rangeIntensity,

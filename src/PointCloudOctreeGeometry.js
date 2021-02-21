@@ -209,11 +209,11 @@ export class PointCloudOctreeGeometryNode extends PointCloudTreeNode{
 				nodes[name] = currentNode;
 			}
 
-			let duration = performance.now() - tStart;
-			if(duration > 5){
-				let msg = `duration: ${duration}ms, numNodes: ${decoded.length}`;
-				console.log(msg);
-			}
+			//let duration = performance.now() - tStart;
+			//if(duration > 5){
+			//	let msg = `duration: ${duration}ms, numNodes: ${decoded.length}`;
+			//	console.log(msg);
+			//}
 
 			node.loadPoints();
 		};

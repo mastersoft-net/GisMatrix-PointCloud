@@ -180,7 +180,7 @@ export class Annotation extends EventDispatcher {
 				annotationStartOffset = this.offset.clone();
 				$(this.domElement).find(".annotation-titlebar").css("pointer-events", "none");
 
-				console.log($(this.domElement).find(".annotation-titlebar"));
+				// console.log($(this.domElement).find(".annotation-titlebar"));
 			},
 			stop: () => {
 				$(this.domElement).find(".annotation-titlebar").css("pointer-events", "");

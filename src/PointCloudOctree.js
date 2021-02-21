@@ -1046,8 +1046,8 @@ export class PointCloudOctree extends PointCloudTree {
 		let ds = new THREE.Vector3().subVectors(shrinkedLocalBounds.max, shrinkedLocalBounds.min);
 		fitted.scale.multiply(ds);
 
-		let duration = performance.now() - start;
-		console.log("duration: ", duration);
+		//let duration = performance.now() - start;
+		// console.log("duration: ", duration);
 
 		yield fitted;
 	}
@@ -1103,8 +1103,8 @@ export class PointCloudOctree extends PointCloudTree {
 		let ds = new THREE.Vector3().subVectors(shrinkedLocalBounds.max, shrinkedLocalBounds.min);
 		fitted.scale.multiply(ds);
 
-		let duration = performance.now() - start;
-		console.log("duration: ", duration);
+		//let duration = performance.now() - start;
+		//console.log("duration: ", duration);
 
 		return fitted;
 	}

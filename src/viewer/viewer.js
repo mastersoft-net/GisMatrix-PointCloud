@@ -964,7 +964,7 @@ export class Viewer extends EventDispatcher {
         this.isFlipYZ = !this.isFlipYZ;
 
         // TODO flipyz
-        console.log('TODO');
+        // console.log('TODO');
     }
 
     setCameraMode(mode) {
