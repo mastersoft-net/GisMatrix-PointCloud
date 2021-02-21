@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\src",
     "\\src\\exporter",
+    "\\src\\loader",
     "\\src\\modules",
     "\\src\\modules\\loader",
     "\\src\\modules\\loader\\2.0",
@@ -9,6 +11,6 @@
     "\\src\\viewer",
     "\\src\\workers"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\src\\viewer\\profile.js",
   "PreviewInSolutionExplorer": false
 }

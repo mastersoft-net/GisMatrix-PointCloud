@@ -54,7 +54,7 @@ export class ProfileTool extends EventDispatcher {
 		let domElement = this.viewer.renderer.domElement;
 
 		let profile = new Profile();
-		profile.name = args.name || 'Profile';
+		profile.name = args.name || i18n.t("gismatrix.profile");
 
 		this.dispatchEvent({
 			type: 'start_inserting_profile',
