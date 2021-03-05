@@ -2,15 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\loader",
     "\\src\\loader\\ept",
-    "\\src\\navigation",
-    "\\src\\tools",
-    "\\src\\utils",
-    "\\src\\viewer",
-    "\\src\\viewer\\PropertyPanels",
-    "\\src\\workers"
+    "\\src\\viewer\\PropertyPanels"
   ],
-  "SelectedNode": "\\src\\PointCloudOctree.js",
+  "SelectedNode": "\\src\\PotreeRenderer.js",
   "PreviewInSolutionExplorer": false
 }
