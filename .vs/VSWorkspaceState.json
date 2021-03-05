@@ -2,9 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\loader\\ept",
-    "\\src\\viewer\\PropertyPanels"
+    "\\src\\loader",
+    "\\src\\modules",
+    "\\src\\modules\\CameraAnimation",
+    "\\src\\utils",
+    "\\src\\viewer"
   ],
-  "SelectedNode": "\\src\\PotreeRenderer.js",
+  "SelectedNode": "\\src\\viewer\\PotreeRenderer.js",
   "PreviewInSolutionExplorer": false
 }

@@ -1,6 +1,6 @@
 
 
-import * as THREE from "three";
+import * as THREE from "../libs/three.js/build/three.module.js";
 import {Action} from "./Actions.js";
 import {Utils} from "./utils.js";
 import {EventDispatcher} from "./EventDispatcher.js";
